@@ -1,3 +1,9 @@
 fastapi
 uvicorn
+python-multipart
 qdrant-client
+pdfplumber
+
+# dev dependencies
+reportlab
+pytest

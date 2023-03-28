@@ -1,12 +1,21 @@
-from fastapi import FastAPI, Body
-from models.api import QueryRequest, QueryResponse
+from fastapi import FastAPI, Body, File, UploadFile
+from models.api import (
+    UpsertRequest,
+    UpsertResponse,
+    QueryRequest,
+    QueryResponse,
+    DeleteRequest,
+    DeleteResponse,
+)
 
 
 app = FastAPI()
 
 
 @app.post("/upsert-file")
-async def upsert_file():
+async def upsert_file(file: UploadFile = File(...)):
+    contents = await file.read()
+    print(contents)
     return {"status": "upserted file"}
 
 

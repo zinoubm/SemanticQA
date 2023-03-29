@@ -1,8 +1,8 @@
 from parser.interface import ParserInterface
-import pdfplumber
+import docx
 
 
-class PdfParser(ParserInterface):
+class DocxParser(ParserInterface):
     def parse(file_path) -> str:
-        pdf = pdfplumber.open(file_path)
-        return " ".join([page.extract_text() for page in pdf.pages])
+        document = docx.Document(file_path)
+        return " ".join([paragraph.text for paragraph in document.paragraphs])

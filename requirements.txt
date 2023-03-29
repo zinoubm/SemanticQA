@@ -4,6 +4,7 @@ python-multipart
 qdrant-client
 pdfplumber
 python-docx
+openai
 
 # dev dependencies
 reportlab

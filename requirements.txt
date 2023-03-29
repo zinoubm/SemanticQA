@@ -3,6 +3,7 @@ uvicorn
 python-multipart
 qdrant-client
 pdfplumber
+python-docx
 
 # dev dependencies
 reportlab

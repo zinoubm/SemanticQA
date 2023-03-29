@@ -1,9 +1,9 @@
 import os
+import re
 from parser.parsers.pdf import PdfParser
 from parser.parsers.txt import TxtParser
 
 from tests.data import dummy_pdf, dummy_txt
-import re
 
 
 def standarize(text):

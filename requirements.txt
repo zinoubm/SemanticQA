@@ -5,6 +5,7 @@ qdrant-client
 pdfplumber
 python-docx
 openai
+python-dotenv
 
 # dev dependencies
 reportlab

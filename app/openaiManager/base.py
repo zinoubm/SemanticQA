@@ -45,7 +45,7 @@ class OpenAiManager:
                     ],
                 )
                 .choices[0]
-                .message["content"]
+                .message.content.strip()
             )
 
         except Exception as err:

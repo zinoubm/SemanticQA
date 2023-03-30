@@ -1,24 +1,24 @@
-from openaiManager.base import OpenAiManager
+def ask(context, question, manager):
+    prompt = f"""
+    Use the context to write a detailed answer to the following question
+
+    context: {context}
+
+    question: {question}
+
+    answer:
+    """
+
+    return manager.get_chat_completion(prompt)
 
 
-def ask(self, question):
-    pass
-
-
-def summarize(input: str, manager):
+def summarize(input, manager):
     prompt = f"""
     Summarize the following passage in detail
+
     passage: {input}
 
     summary:
     """
 
     return manager.get_chat_completion(prompt)
-
-
-if __name__ == "__main__":
-
-    test = "say hi"
-    manager = OpenAiManager()
-    res = manager.get_chat_completion(test, manager)
-    print(res)

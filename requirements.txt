@@ -6,6 +6,7 @@ pdfplumber
 python-docx
 openai
 python-dotenv
+uuid7
 
 # dev dependencies
 reportlab

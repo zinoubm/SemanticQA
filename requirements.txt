@@ -7,6 +7,8 @@ python-docx
 openai
 python-dotenv
 uuid7
+textwrap3
+Unidecode
 
 # dev dependencies
 reportlab

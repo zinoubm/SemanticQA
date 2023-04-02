@@ -1,7 +1,0 @@
-Use the passage to write a detailed answer to the following question
-
-passage: <<PASSAGE>>
-
-question: <<QUESTION>>
-
-answer:

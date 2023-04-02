@@ -18,8 +18,10 @@ class DocumentChunkWithScore(DocumentChunk):
 
 
 class DocumentMetadata(BaseModel):
-    created_at: Optional[str]
+    title: Optional[str]
     author: Optional[str]
+    created_at: Optional[str]
+    file_type: Optional[str]
 
 
 class Document(BaseModel):
@@ -28,14 +30,14 @@ class Document(BaseModel):
     metadata: DocumentMetadata
 
 
-class Query(BaseModel):
-    query: str
+class Question(BaseModel):
+    question: str
 
 
-class QueryWithEmbedding(Query):
+class QuestionWithEmbedding(Question):
     embedding: List[float]
 
 
-class QueryResult(BaseModel):
-    query: str
-    results: List[DocumentChunk]
+class Answer(BaseModel):
+    question: Question
+    results: List[DocumentChunkWithScore]

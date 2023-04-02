@@ -11,12 +11,12 @@ class UpsertResponse(BaseModel):
     ids: List[str]
 
 
-class QueryRequest(BaseModel):
-    query: str
+class QuestionRequest(BaseModel):
+    question: str
 
 
-class QueryResponse(BaseModel):
-    result: str
+class QuestionResponse(BaseModel):
+    answer: str
 
 
 class DeleteRequest(BaseModel):

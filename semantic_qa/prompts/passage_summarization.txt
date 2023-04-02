@@ -1,4 +1,0 @@
-Summarize the following passage in detail
-passage: <<PASSAGE>>
-
-summary:

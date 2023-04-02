@@ -53,7 +53,7 @@ class OpenAiManager:
 
         return response
 
-    def get_embedding(self, prompt, model="text-similarity-ada-001"):
+    def get_embedding(self, prompt, model="text-embedding-ada-002"):
         prompt = prompt.replace("\n", " ")
 
         embedding = None
@@ -66,6 +66,18 @@ class OpenAiManager:
             print(f"Sorry, There was a problem {err}")
 
         return embedding
+
+    def get_embeddings(self, prompts, model="text-embedding-ada-002"):
+        prompts = [prompt.replace("\n", " ") for prompt in prompts]
+
+        embeddings = None
+        try:
+            embeddings = openai.Embedding.create(input=prompts, model=model)["data"]
+
+        except Exception as err:
+            print(f"Sorry, There was a problem {err}")
+
+        return [embedding["embedding"] for embedding in embeddings]
 
 
 if __name__ == "__main__":
